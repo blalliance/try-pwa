@@ -1,0 +1,241 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #d63384; /* Rose matrimonial professionnel */
+    --secondary-color: #2c3e50;
+    --white: #ffffff;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+/* Dashboard Styles */
+.dash-body { background: #f4f7f6; overflow-x: hidden; }
+
+/* Sidebar & Overlay */
+.sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background: var(--white);
+    z-index: 2000;
+    transition: 0.4s ease;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.active { left: 0; }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1500;
+    backdrop-filter: blur(2px);
+}
+
+.overlay.active { display: block; }
+
+.sidebar-header { padding: 20px; border-bottom: 1px solid #eee; text-align: center; }
+.logo-sidebar { width: 150px; }
+
+.sidebar-nav { padding: 20px 0; display: flex; flex-direction: column; }
+.sidebar-nav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.sidebar-nav a:hover { background: #fff0f6; color: var(--primary-color); }
+
+.logout-link { color: #e74c3c !important; margin-top: auto; }
+
+/* Header Dashboard */
+.dash-header {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-trigger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    padding: 10px;
+}
+
+.logo-dash-landscape { height: 35px; margin-left: 10px; }
+
+/* Profile Grid - RESPONSIVE MOBILE FIRST */
+.profile-grid {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    /* 2 cards sur smartphone */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .profile-grid { grid-template-columns: repeat(3, 1fr); } /* 3 sur tablette */
+}
+
+@media (min-width: 1200px) {
+    .profile-grid { grid-template-columns: repeat(5, 1fr); } /* 5 sur PC */
+}
+
+/* Card Style */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(214, 51, 132, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info { padding: 12px; text-align: center; }
+.card-info h3 { font-size: 1rem; color: var(--secondary-color); }
+.card-info p { font-size: 0.8rem; color: #777; margin: 5px 0; }
+
+.card-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+.btn-view, .btn-contact {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-view { background: #eee; color: #333; }
+.btn-contact { background: var(--primary-color); color: white; }
+.btn-contact:hover { opacity: 0.9; }
+
+/* Loader */
+.loader-container {
+    text-align: center;
+    padding: 40px;
+    display: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+
+/* --- Sidebar Scrollable --- */
+.sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    width: 280px;
+    height: 100vh; /* Toute la hauteur de l'écran */
+    background: var(--white);
+    z-index: 2000;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    
+    /* Activation du scroll interne */
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+/* --- Personnalisation de la Scrollbar (Chrome, Safari, Edge) --- */
+/* Largeur de la barre */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Fond de la barre (Track) */
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Partie mobile de la barre (Handle) */
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--primary-color); /* Utilise votre couleur rose/matrimoniale */
+    border-radius: 10px;
+}
+
+/* Au survol du handle */
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #b02a6b; /* Un rose plus sombre au survol */
+}
+
+/* --- Support Firefox --- */
+.sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #f1f1f1;
+}
+
+/* --- Ajustements pour la fluidité sur Mobile --- */
+.sidebar-nav {
+    padding: 10px 0 30px 0; /* Ajout d'un padding en bas pour ne pas coller au bord */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pour s'assurer que le contenu ne soit pas coupé par l'encoche des téléphones */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .sidebar {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+

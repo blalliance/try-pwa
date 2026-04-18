@@ -1,0 +1,149 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #d63384; /* Rose matrimonial professionnel */
+    --secondary-color: #2c3e50;
+    --white: #ffffff;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+
+
+/* Styles pour les pages d'authentification */
+.auth-page {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.auth-container {
+    background: var(--white);
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-auth {
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.auth-header h1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon i:first-child {
+    position: absolute;
+    left: 12px;
+    color: #999;
+}
+
+.input-icon input, .input-icon select {
+    width: 100%;
+    padding: 12px 12px 12px 38px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-icon input:focus {
+    border-color: var(--primary-color);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #999;
+    z-index: 10;
+}
+
+.btn-primary-auth {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #777 !important;
+    font-size: 0.85rem;
+}
+
+/* Adaptabilité mobile (Mobile First déjà appliqué, ici ajustements tablettes/PC) */
+@media (min-width: 768px) {
+    .auth-container {
+        padding: 40px;
+    }
+}
