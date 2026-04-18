@@ -7,7 +7,8 @@ if ('serviceWorker' in navigator) {
 
 // 2. Réveil du serveur Render (votre demande)
 function wakeUpServer() {
-  fetch('https://bl-alliance-api.onrender.com', { mode: 'no-cors' })
+  // fetch('https://bl-alliance-api.onrender.com', { mode: 'no-cors' })
+  fetch('https://blalliance.github.io/try-pwa/', { mode: 'no-cors' })
     .then(() => console.log("API réveillée !"))
     .catch(() => console.log("Le serveur est déjà en route."));
 }
