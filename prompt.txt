@@ -1,0 +1,69 @@
+Soit un site web d'une agence de courtage matrimoniale basée a Bukavu --nommée BL Alliance-- ou les hommes et les femmes en besoin de se marier avec la personne idéale ont la possibilté de se retrouver sur base de criteres qui pourront definir eux-memes.
+Je vais vous demander de me creer 4 pages:
+1. landing page
+2. la page d'inscription
+3. la page de connexion
+4. la page de dashoard
+
+À tout moment attendez que je vous donne la descrption de la page avant que vous ne me donniez ces fichiers: html, css et js.
+
+On commence avec la page 1.
+1. landing page tres tres responsive avec des images cadrant avec le contexte (images de personnes noires uniquement), de carosselles, sur le navbar: boutons: connexion, inscription, logo tres tres bien placé sur la page, (filepath: assets/logo2.png, c'est une image en mode paysage), etc. 
+==> le tout tres tres professionnel mais surtout responsive mobile first.
+Mettez absolument tout ce que je viens de demander et exactement comme je viens de le demander (mais surtout surtout la responsivité Mobile First)
+Et à la fin de votre reponse veuillez liste tout ce que je viens de demander et là ou vous l'avez mis très précisement ==> Preuve que tout y est.
+
+2. la page d'inscription avec le formulaire: nom complet, numero de telephone, date de naissance, sexe, mot de passe (avec petit oeil, voir camoufler mot de passe), confirmez mot de passe (avec petit oeil, voir camoufler mot de passe), bouton: S'inscrire.
+Quelque part: logo tres tres bien placé sur la page, (filepath: assets/logo2.png, c'est une image en mode paysage).
+Sous le formulaire liens: Vous avez un compte: Connexion, <-- Retour (vers index.html)
+==> le tout tres tres professionnel mais surtout responsive mobile first.
+Mettez absolument tout ce que je viens de demander et exactement comme je viens de le demander (mais surtout surtout la responsivité Mobile First)
+Et à la fin de votre reponse veuillez liste tout ce que je viens de demander et là ou vous l'avez mis très précisement ==> Preuve que tout y est.
+
+3. la page de connexion, formulaire: numero de telephone, mot de passe.
+Quelque part: logo tres tres bien placé sur la page, (filepath: assets/logo2.png, c'est une image en mode paysage).
+Sous le formulaire liens: Vous n'avez pas de compte: S'inscrire, <-- Retour (vers index.html)
+==> le tout tres tres professionnel mais surtout responsive mobile first.
+Nb: le style de la page de connexion doit etre strictement semblable a celle de la page d'inscription.
+Mettez absolument tout ce que je viens de demander et exactement comme je viens de le demander (mais surtout surtout la responsivité Mobile First)
+Et à la fin de votre reponse veuillez liste tout ce que je viens de demander et là ou vous l'avez mis très précisement ==> Preuve que tout y est.
+
+4. la page de dashboard:
+	* Quelque part: logo tres tres bien placé sur la page, (filepath: assets/logo2.png, c'est une image en mode paysage).
+	* trois point cliquable et ouvrant sidebar (si sidebar un clic sur un autre endroit en dehors de ce sidebar doit le refermer (referemer le sidebar) --> et s'il est overt le reste de la page doit etre un peu opage)
+	* Elements sur sidebar (+ belles icones): Editer Profil, Mes Criteres, Correspondants, Mobile App, Notifications, Portefeille, Feedback, À propos, Déconnexion (style un peu à part).
+	* des cards des gens: responsivité: 2 cards sur smartphone, 3 sur tablette, et 5 sur ordinateur
+	* sur chaque card: image de la personne, nom, age, ville actuelle, bouton, voir le profil, contacter.
+	* ces cards doivent se recharger en mode infinite scroll (par groupe de 20)
+	==> avant le futur scroll : un beau truc qui tourne sous la page pendant une ou 2 seconde(s) (preprogrammer ce temps d'attente artificiellement)
+	* Tout sur la page doit avoir un effet pro sur hover et au clic
+	* Ajouter 2 ou 3 trucs pour plus de professionalisme
+
+* Ici donnez aussi le fichier json:
+Pour les profiles preparer un fichier json (qui sera appelé par je javascript) ayant 100 profiles.
+chaque profil: url photo, villa actuelle, nom, age, bio (suffisamment detaillé), numero de tel, profession, centre d'interet, sport, habitudes, etc.
+
+* NB: desolé il y aura aussi la page 5
+	Codez cette page de dashboard de sorte que 
+	- si on clique sur : voir le profil (sur une card) on est redirigé sur la page de profil de la personne en question avec les elements de cette personne (meme image de profile, nom, age, bio, etc.)
+	Je vais vous demander le code de cette page apres mais retenez que ca existe pour que ca soit bien connecté avec ce dashboard.
+
+==> le tout tres tres professionnel mais surtout responsive mobile first.
+Mettez absolument tout ce que je viens de demander et exactement comme je viens de le demander (mais surtout surtout la responsivité Mobile First)
+Et à la fin de votre reponse veuillez liste tout ce que je viens de demander et là ou vous l'avez mis très précisement ==> Preuve que tout y est.
+Rappel: Après ce sera la page de profil pour final enfin.
+
+5. La page de profil:
+* Si on clique sur "voir le profil" (sur une card de dashboard) on est redirigé ici sur la page de profil de la meme personne en question avec les elements de cette personne (meme image de profile, nom, age, bio, et tout le reste sans exception.)
+* Quelque part: logo tres tres bien placé sur la page, (filepath: assets/logo2.png, c'est une image en mode paysage).
+* Ajout d'un beau bouton responsive de retour vers dashboard.
+* Si on clique sur la photo de profil de la personne elle entre en mode plein ecran et ce sans deborder en longueur ni en largeur (et responsivité selon la taille de l'ecran).
+	==> sur la photo en plein ecran mettez une belle petite icone-bouton de fleche retour (en bas a droite sur la photo / ou sur l'ecran) pour revoir l'ensemble du profile.
+
+==> le tout tres tres professionnel mais surtout responsive mobile first.
+Mettez absolument tout ce que je viens de demander et exactement comme je viens de le demander (mais surtout surtout la responsivité Mobile First)
+Et à la fin de votre reponse veuillez liste tout ce que je viens de demander et là ou vous l'avez mis très précisement ==> Preuve que tout y est.
+Rappel: Après ce sera la page de profil pour final enfin.
+
+
+

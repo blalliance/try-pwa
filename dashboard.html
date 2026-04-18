@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BL Alliance</title>
+    <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="script/pwa-handler.js"></script>
+</head>
+<body class="dash-body">
+
+    <div id="overlay" class="overlay"></div>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/logo2.png" alt="Logo" class="logo-sidebar">
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#"><i class="fas fa-user-edit"></i> Editer Profil</a>
+            <a href="#"><i class="fas fa-sliders-h"></i> Mes Critères</a>
+            <a href="#"><i class="fas fa-user-friends"></i> Correspondants</a>
+            <a href="#"><i class="fas fa-mobile-alt"></i> Mobile App</a>
+            <a href="#" class="nav-notif"><i class="fas fa-bell"></i> Notifications <span class="badge">3</span></a>
+            <a href="#"><i class="fas fa-wallet"></i> Portefeuille</a>
+            <a href="#"><i class="fas fa-comment-dots"></i> Feedback</a>
+            <a href="#"><i class="fas fa-info-circle"></i> À propos</a>
+            <hr>
+            <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="dash-header">
+            <div class="header-left">
+                <button id="menuBtn" class="menu-trigger">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <img src="assets/logo2.png" alt="BL Alliance" class="logo-dash-landscape">
+            </div>
+            <div class="header-right">
+                <div class="user-pill">
+                    <span>Bukavu, RDC</span>
+                    <div class="online-indicator"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <h2>Découvrez vos partenaires idéaux</h2>
+            <p>Basé sur vos critères de sélection personnels.</p>
+        </section>
+
+        <div id="profile-grid" class="profile-grid">
+            </div>
+
+        <div id="loader" class="loader-container">
+            <div class="spinner"></div>
+            <p>Recherche de profils...</p>
+        </div>
+    </main>
+
+    <script src="script/dashboard.js"></script>
+</body>
+</html>
